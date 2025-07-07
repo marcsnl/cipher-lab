@@ -26,6 +26,23 @@ body {
   color: var(--text-color);
 }
 
+button{
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 18px;
+  height: 50px;
+  width: 200px;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+button:hover{
+  background: var(--secondary-color)
+}
+
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -78,8 +95,20 @@ nav {
   user-select: none;
 }
 
+#logoLink{
+  font-size: 30px;
+  font-weight: 600;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
 .page-logo {
-  width: 46x;
+  width: 46px;
   height: 46px;
   border-radius: 50%;
   object-fit: cover;
@@ -87,7 +116,6 @@ nav {
 }
 
 /* -------- Navigation Bar Links -------- */
-
 .nav-links {
   display: flex;
   flex-wrap: wrap;
@@ -112,14 +140,12 @@ nav {
 }
 
 /* -------- Appearance Area Style -------- */
-
-.appearance-area{
+.appearance-area {
   display: flex;
   align-items: center;
 }
 
-.dark-mode-btn,
-.color-theme .color-icon {
+.dark-mode-btn {
   width: 50px;
   height: 50px;
   background: var(--secondary-color);
@@ -133,78 +159,17 @@ nav {
   opacity: 0.8;
 }
 
-.color-theme .color-icon {
-  width: 70px;
-}
-
-.color-theme:hover,
 .dark-mode-btn:hover {
   opacity: 1;
 }
 
-.color-menu {
-  position: absolute;
-  bottom: -110px;
-  right: 10px;
-  background: var(--white);
-  padding: 16px;
-  border-radius: 6px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.color-theme.open .color-menu {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.color-theme.open .arrow {
-  transform: rotate(-180deg);
-}
-
-.color-menu h3 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: black;
-}
-
-.color-switchers {
-  display: flex;
-  gap: 10px;
-}
-
-.color-switchers .btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  border-color: var(--primary-color)
-}
-
-.color-switchers .btn.black { background: #000; }
-.color-switchers .btn.red { background: #800000; }
-.color-switchers .btn.blue { background: #003153; }
-.color-switchers .btn.green { background: #355E3B; }
-.color-switchers .btn.indigo { background: #4B0082; }
-
-.color-switchers .btn.active {
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--primary-color);
-}
-
-
 /* -------- Page Content Style -------- */
-
 .content {
   flex: 1;
   padding-top: 50px;
 }
 
 /* -------- Page Links Style -------- */
-
 .content a {
   font-size: 20px;
   padding: 12px 20px;
@@ -219,25 +184,6 @@ nav {
 
 .content a:hover {
   background: var(--secondary-color);
-}
-
-.page-content a.archive-link {
-  font-weight: 570;
-  font-size: 16px;
-  width: 260px;
-}
-
-.page-content a.icon-link {
-  font-size: 16px;
-  justify-content: center;
-}
-
-.archive-list {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  gap: 5px;
-  width: 100%;
 }
 
 .about-links {
@@ -256,7 +202,6 @@ nav {
 .about-area-links:hover {
   background: var(--secondary-color);
 }
-
 
 /* -------- Main Section Style -------- */
 .page-content {
@@ -289,40 +234,265 @@ nav {
   margin: 20px 0 30px;
 }
 
-/* -------- Archive Area Style -------- */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-  gap: 10px;
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 30px;
+/* -------- Main Program Style -------- */
+
+.projects-canvas {
+  text-align: center;
 }
 
+.projects-canvas p {
+  font-size: 18px;
+}
 
-.box {
-  background: var(--white);
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  color: var(--text-color);
+.mainMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.methodBtn{
+  height: 50px;
+  width: 150px;
+}
+
+.toggleButton{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  width: 100%;
+  margin: 30px;
+  height: 50px;
+  width: 100px;
 }
 
-.box h4 {
-  font-size: 25px;
-  margin-bottom: 20px;
-  text-align: center;
+.methodSelect{
+  width: 200px;
 }
 
-.box ul {
-  list-style-type: none;
+/* -------- Cipher Area Style -------- */
+
+.cipherArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.box ul li {
-  margin-bottom: 10px;
+#cipherInput {
+  width: 500px;
+  max-width: 90%;
+  height: 150px;
+  padding: 0.8rem 1rem;
+  font-size: 18px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  background-color: var(--ui-bg);
+  color: var(--text-color);
+  outline: none;
+  resize: vertical; /* allow resizing */
+  line-height: 1.5;
+  text-align: left;
+  vertical-align: top;
+}
+
+#cipherInput::placeholder {
+  color: var(--text-color);
+  opacity: 0.70;
+}
+
+.cipher-method-selection {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#cipherMethodSelect {
+  height: 50px;
+  font-size: 16px;
+  padding: 0 15px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  background-color: var(--ui-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  outline: none;
+}
+
+.caesar-shift-dropdown{
+   height: 50px;
+  font-size: 16px;
+  padding: 0 15px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  background-color: var(--ui-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  outline: none;
+}
+
+.cipher-output-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.cipher-output-box {
+  width: 500px;
+  max-width: 90%;
+  height: 150px;
+  padding: 0.8rem 1rem;
+  font-size: 18px;
+  font-family: 'Courier';
+  border: 1px solid gray;
+  border-radius: 8px;
+  background-color: var(--ui-bg);
+  color: var(--text-color);
+  outline: none;
+  resize: vertical;
+  line-height: 1.5;
+  text-align: left;
+  vertical-align: top;
+}
+
+.cipher-output-box::placeholder {
+  color: var(--text-color);
+  opacity: 0.70;
+}
+
+/* -------- Decipher Area Style -------- */
+
+.decipherArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#decipherInput {
+  width: 500px;
+  max-width: 90%;
+  height: 150px;
+  padding: 0.8rem 1rem;
+  font-size: 18px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  background-color: var(--ui-bg);
+  color: var(--text-color);
+  outline: none;
+  resize: vertical; /* allow resizing */
+  line-height: 1.5;
+  text-align: left;
+  vertical-align: top;
+}
+
+#decipherInput::placeholder {
+  color: var(--text-color);
+  opacity: 0.70;
+}
+
+.decipher-method-selection {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#decipherMethodSelect {
+  height: 50px;
+  font-size: 16px;
+  padding: 0 15px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  background-color: var(--ui-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  outline: none;
+}
+
+.decrypt-caesar-shift-dropdown{
+  height: 50px;
+  font-size: 16px;
+  padding: 0 15px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  background-color: var(--ui-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  outline: none;
+}
+
+.decipher-output-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.decipher-output-box {
+  width: 500px;
+  max-width: 90%;
+  height: 150px;
+  padding: 0.8rem 1rem;
+  font-size: 18px;
+  font-family: 'Courier';
+  border: 1px solid gray;
+  border-radius: 8px;
+  background-color: var(--ui-bg);
+  color: var(--text-color);
+  outline: none;
+  resize: vertical;
+  line-height: 1.5;
+  text-align: left;
+  vertical-align: top;
+}
+
+.decipher-output-box::placeholder {
+  color: var(--text-color);
+  opacity: 0.70;
+}
+
+/* -------- Instruction Area Style -------- */
+
+.instructionArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.guideSection {
+  position: relative;
+  padding-top: 3rem; /* spacing from previous content */
+  margin-top: 3rem;  /* additional separation if desired */
+}
+
+.guideSection::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px; /* thickness of the line */
+  background-color: #ccc; /* or your accent color */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cipherGuide img.cipher-img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* -------- About Area Style -------- */
@@ -344,16 +514,16 @@ nav {
 }
 
 /* -------- Dark Mode Theme -------- */
-
 .color-text.darkMode {
-  /*-- yellow --*/
-  color: #FFD700; 
+  color: #FFD700;  /* yellow */
 }
 
-.box.darkMode {
-  /*-- soft black --*/
-  background: #121415;
+/* --------- Other Function Mode and Styles ----- */
+
+.hidden{
+  display: none;
 }
+
 
 /* -------- Responsive Media -------- */
 @media (max-width: 1100px) {
@@ -364,10 +534,9 @@ nav {
   .page-content p {
     width: 90%;
   }
-
 }
 
-/* ------- Mobile Device------- */
+/* ------- Mobile Device ------- */
 @media (max-width: 768px) {
   .nav-links-menu-toggle {
     display: block;
@@ -398,7 +567,7 @@ nav {
   }
 
   .appearance-area {
-    display: flex; 
+    display: flex;
     align-items: center;
     gap: 10px;
   }

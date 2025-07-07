@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
   
-  <head>
-    <!-- Initial tags -->
-    <meta charset="UTF-8" />
-    <meta name="description" content="This is a project archive and somehow a portfolio" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Page Icon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    
-    <!-- Page Title -->
-    <title>Marc</title>
-    
-    <!-- style.css link -->
-    <link rel="stylesheet" href="style.css" />
-    
-    <!-- Font Awsome local link -->
-    <link rel="stylesheet" href="all.css" />
+   <!-- Page Title -->
+  <title>Cipher Lab</title>
 
-    <!-- Font Awsome main link -->
-    <!--
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    -->
+  <!-- Initial tags -->
+  <meta charset="UTF-8" />
+  <meta name="description" content="This is a template sample for future project use" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-  </head>
-  
-  <body>
+  <!-- Page Icon | Activate if outside of CodePen-->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    
+  <!-- style.css link -->
+  <link rel="stylesheet" href="style.css" />
+    
+  <!-- Font Awsome local link -->
+  <link rel="stylesheet" href="all.css" />
+
+  <!-- Font Awsome main link -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/> -->
+    
+</head>
+    <body>
 
     <!-- Body Wrapper-->
     <div class="wrapper">
@@ -36,12 +34,12 @@
         <div class="navigation-bar">
 
           <!-- Logo and/or Title Area of Navigation Bar -->
-          <div class="title-page-area"><img src="assets/images/page-logo.png" class="page-logo" alt="page logo"/>Marc</div>
+          <div class="title-page-area"><img src="assets/images/page-logo.png" class="page-logo" alt="page logo"/><a id="logoLink" href="https://marcsnl.github.io/" target="_blank">Marc</a></div>
           
           <!-- Navigation Bar Links-->
           <ul class="nav-links">
             <li><a href="#home" class="active-nav">Home</a></li>
-            <li><a href="#archive">Archive</a></li>
+            <li><a href="#mainProgram">Cipher Lab</a></li>
             <li><a href="#about">About</a></li>
           </ul>
 
@@ -52,30 +50,6 @@
 
           <!-- Appearance Area (Color Theme and DarkMode) of Navigation Bar -->
           <div class="appearance-area">
-
-            <!-- Color Selection Button -->
-            <div class="color-theme" title="Color Theme">
-              <div class="color-icon">
-                <i class="fas fa-palette"></i>
-                <i class="fas fa-sort-down arrow"></i>
-              </div>
-
-              <!-- Color Selection Box (Pop-up Menu) -->
-              <div class="color-menu">
-                <!-- Color Selection Box Title -->
-                <h3>Color Selection</h3>
-                <!-- Color Buttons (Data Color : Hex 0-White 1-text-color 2-primary-color 3-secondary-color 4-ui-bg) -->
-                <div class="color-switchers">
-                    <button class="btn black active" title="Black" data-color="#fff #000000 #000000 #272B2F #FFFFFF"></button>
-                    <button class="btn red" title="Red" data-color="#fff #000000 #800000 #65000B #F8F0F0"></button>
-                    <button class="btn blue" title="Blue" data-color="#fff #000000 #003153 #0F1E33 #F0F4F8"></button>
-                    <button class="btn green" title="Green" data-color="#fff #000000 #355E3B #043927 #F1FAF3"></button>
-                    <button class="btn indigo" title="Violet"data-color="#fff #000000 #4B0082 #32174D #F4F0FA"></button>
-                </div>
-              </div>
-              
-            </div>
-
             <!-- Darkmode Button -->
             <div class="dark-mode-btn" title="Dark Mode">
               <!-- Data Color : Hex  0-White 1-text-color 2-primary-color 3-secondary-color 4-ui-bg -->
@@ -93,93 +67,222 @@
         <section id="home" class="page-content active-section">
           <div class="texts">
             <h3><span class="color-text">Welcome!</span></h3>
-            <p>The name is Marc.</p>
-            <h3>I <span class="color-text">know</span>...</h3>
-            <p>Basic frontend stuff using HTML/CSS/JS.</p>
-            <h3>I like to <span class="color-text">create</span> stuff...</h3>
-            <p>I make computer programs with the help of free online tutorials around the internet.</p>
-            <h3>Let's <span class="color-text">Explore</span> :</h3>
-            <p>Feel free to explore my projects and assets.</p>
-            <a href="#archive" id="exploreBtn">Explore <i class="fas fa-location-arrow"></i></a>
+            <p>Another entry for a bit more advanced projects... Here, we're focusing on ciphering!</p>
+            <h3>Cipher Definition</h3>
+            <p>It is a method of transforming a text in order to conceal its meaning from plain sight.</p>
+            <h3>Cipher Lab</h3>
+            <p>In this application, you can cipher or decipher words and characters.</p>
+            <h3>Let's <span class="color-text" id="cipherWord">Cipher</span>!</h3>
+            <p>Click the button below to start.</p>
+            <a href="#mainProgram" id="mainProgramBtn">Cipher <i class="fas fa-location-arrow"></i></a>
           </div>
         </section>
       
-        <!-- Archive Section -->
-        <section id="archive" class="page-content">
-          <div class="texts">
-            <h3>My <span class="color-text">Stuff</span></h3>
-          </div>
+        <!-- Main Program Section -->
+        <section id="mainProgram" class="page-content">
+          <div class="projects-canvas">
+            
+            <!---------- Main Menu Area ---------->
+            <div class="mainMenu">
 
-          <div class="projects-grid">
+             <!-- Main Menu Header -->
+             <h3><i class="fa-solid fa-user-secret"></i> <span class="color-text">Cipher</span> Lab</h3>
+             <p>Choose whether to cipher or decipher your text.</p>
 
-            <!-- Box Containers -->
-            <div class="box">
-              <h4>Basic Projects</h4>
-              <ul>
-                <li class="archive-list"><a href="projects/basic-webpage-template/index.html" target="_blank" class="archive-link">Basic Webpage Template</a> <a href="https://codepen.io/marcsnl/pen/raNPWWX" target="_blank" class="icon-link" title="CodePen"><i class="fas fa-pen"></i></a></li>
-                <li class="archive-list"><a href="projects/randomizer/index.html" target="_blank" class="archive-link">Randomizer</a> <a href="https://codepen.io/marcsnl/pen/wBvQRdr" target="_blank" class="icon-link"><i class="fas fa-pen"  title="CodePen"></i></a></li>
-                <li class="archive-list"><a href="projects/bmi-calculator/index.html" target="_blank" class="archive-link">BMI Calculator</a> <a href="https://codepen.io/marcsnl/pen/mydZQjw" target="_blank" class="icon-link"><i class="fas fa-pen"  title="CodePen"></i></a></li>
-                <li class="archive-list"><a href="projects/profile-recorder-csv/index.html" target="_blank" class="archive-link">Profile Recorder (CSV)</a> <a href="https://codepen.io/marcsnl/pen/ZYEdBbJ" target="_blank" class="icon-link"  title="CodePen"><i class="fas fa-pen"></i></a></li>
-                <li class="archive-list"><a href="projects/guess-the-number/index.html" target="_blank" class="archive-link">Guess The Number (Game)</a> <a href="https://codepen.io/marcsnl/pen/XJWORaW" target="_blank" class="icon-link"  title="CodePen"><i class="fas fa-pen"></i></a></li>
-              </ul>
+             <!-- Cipher and decipher toggle buttons -->
+             <button id="cipherBtn"><i class="fas fa-lock"></i> Cipher</button>
+             <button id="decipherBtn"><i class="fas fa-lock-open"></i> Decipher</button>
+             <button id="instructionBtn"><i class="fa-solid fa-book"></i> How it Works</button>
+              
+            </div>
+            
+            <!---------- Cipher Area ---------->
+            <div class="cipherArea hidden">
+              
+              <!-- Cipher Area Header -->
+              <h3><i class="fa-solid fas fa-lock"></i> Let's <span class="color-text">Cipher</span>!</h3>
+              <p>Enter your text and choose a cipher method :</p>
+            
+              <!-- Cipher Input Area -->
+              <div class="cipher-input-area">
+                <textarea id="cipherInput" name="cipherInput" placeholder="Enter text to cipher..."></textarea>
+              </div>
+
+              <!-- Method and Shift Selection -->
+              <div class="cipher-method-selection">
+
+                <!-- Cipher Method Dropdown -->
+                <select class="methodSelect" id="cipherMethodSelect">
+                  <option value="" disabled selected>Select Method</option>
+                  <option value="caesar">Caesar Cipher</option>
+                  <option value="atbash">Atbash Cipher</option>
+                </select>
+
+                <!-- Shift Dropdown (hidden initially) -->
+                <select id="caesarShiftSelect" class="caesar-shift-dropdown hidden">
+                  <option value="" disabled selected>Select Shift (1-25)</option>
+                      <!-- Options generated by JS later -->
+                </select>
+
+              </div>
+
+              <!-- Cipher Button -->
+              <button id="cipherButton">Cipher <i class="fas fa-lock"></i></button>
+                              
+              <!-- Cipher Output Area -->
+              <div class="cipher-output-area">
+                <p>Your Ciphered Text Below :</p>
+                <textarea id="cipherOutput" name="cipherOutput" class="cipher-output-box" placeholder="Ciphered text will appear here..." readonly></textarea>
+              </div>
+                              
+              <!-- Layer Prompt Area (hidden initially) -->
+              <div id="layerPromptArea" class="hidden">
+                <p id="layerPromptText">Want to add another layer?</p>
+                <button id="layerCipherButton">[Unused Cipher] Cipher</button>
+                <!-- Layered Shift Dropdown (hidden unless Caesar is chosen) -->
+                <select id="layeredCaesarShiftSelect" class="caesar-shift-dropdown hidden">
+                  <option value="" disabled selected>Select Shift (1-25)</option>
+                  <!-- Generated by JS -->
+                </select>
+              </div>
+
+              <!-- Layered Output Area (hidden initially) -->
+              <div id="layeredOutputArea" class="cipher-output-area hidden">
+                <p>Your Layered Cipher Text Below :</p>
+                <textarea id="layeredCipherOutput" name="layeredCipherOutput" class="cipher-output-box" placeholder="Layered ciphered text will appear here..." readonly></textarea>
+              </div>
+
+              <!-- Back and Reset Button -->
+              <div class="resetAndBackBtn">
+                <button class="toggleButton" id="resetCipherBtn">Reset</button>
+                <button class="toggleButton" id="cipherMenuBackBtn">Back</button>              
+              </div>          
+
             </div>
 
-            <div class="box">
-              <h4>Standard Projects</h4>
-              <ul>
-                <li class="archive-list"><a href="projects/standard-webpage-template/index.html" target="_blank" class="archive-link">Standard Webpage Template</a> <a href="https://codepen.io/marcsnl/pen/OPJKEPG" target="_blank" class="icon-link" title="CodePen"><i class="fas fa-pen"></i></a></li>
-                <li class="archive-list"><a href="projects/password-generator/index.html" target="_blank" class="archive-link">Password Generator</a> <a href="https://codepen.io/marcsnl/pen/LEEPVPO" target="_blank" class="icon-link" title="CodePen"><i class="fas fa-pen"></i></a></li>
-                <li class="archive-list"><a href="projects/bank-interest-calculator/index.html" target="_blank" class="archive-link">Bank Interest Calculator</a> <a href="https://codepen.io/marcsnl/pen/WbbbGGZ" target="_blank" class="icon-link" title="CodePen"><i class="fas fa-pen"></i></a></li>
-                <li class="archive-list"><a href="projects/store-inventory-manager/index.html" target="_blank" class="archive-link">Store Inventory Manager</a> <a href="https://codepen.io/marcsnl/pen/QwwyOxX" target="_blank" class="icon-link" title="CodePen"><i class="fas fa-pen"></i></a></li>
-                <li class="archive-list"><a href="projects/eat-the-apple/index.html" target="_blank" class="archive-link">Eat The Apple (Game)</a> <a href="https://codepen.io/marcsnl/pen/JooWJrB" target="_blank" class="icon-link"  title="CodePen"><i class="fas fa-pen"></i></a></li>
-              </ul>
-            </div>
+            <!---------- Decipher Area ---------->
 
-            <div class="box">
-              <h4>Advance Projects</h4>
-              <ul>
-                <li class="archive-list"><a href="projects/advance-webpage-template/index.html" target="_blank" class="archive-link">Advance Webpage Template</a> <a href="https://codepen.io/marcsnl/pen/RNPGXGE" target="_blank" class="icon-link"  title="CodePen"><i class="fas fa-pen"></i></a></li>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-pen"></i></a></li>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-pen"></i></a></li>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-pen"></i></a></li>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-pen"></i></a></li>
-              </ul>
-            </div>
+            <div class="decipherArea hidden">
 
-            <div class="box">
-              <h4>Assets</h4>
-              <ul>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-image"></i></a></li>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-video"></i></a></li>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-music"></i></a></li>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-code"></i></a></li>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-cubes"></i></a></li>
-              </ul>
-            </div>
-                
-            <div class="box">
-              <h4>Special Projects</h4>
-              <ul>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a></li>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a></li>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a></li>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a></li>
-                <li class="archive-list"><a href="#" class="archive-link"><i class="fas fa-triangle-exclamation"></i></a></li>
-              </ul>
-            </div>
+              <!-- Decipher Area Header -->
+              <h3><i class="fa-solid fas fa-lock-open"></i> Let's <span class="color-text">Decipher</span>!</h3>
+              <p>Enter your ciphered text and choose a decipher method :</p>
+              
+              <!-- Decipher Input Area -->
+              <div class="decipher-input-area">
+                <textarea id="decipherInput" name="decipherInput" placeholder="Enter text to decipher..."></textarea>
+              </div>
+              
+              <!-- Method and Shift Selection -->
+              <div class="decipher-method-selection">
 
-            <div class="box">
-              <h4>Fields of Interest</h4>
-              <ul>
-                <li class="archive-list"><a href="#" class="archive-link">Web Development</a></li>
-                <li class="archive-list"><a href="#" class="archive-link">Game Development</a></li>
-                <li class="archive-list"><a href="#" class="archive-link">Cybersecurity</a></li>
-                <li class="archive-list"><a href="#" class="archive-link">Robotics</a></li>
-                <li class="archive-list"><a href="#" class="archive-link">Machine Learning</a></li>
-              </ul>
-            </div>
+                <!-- Decipher Method Dropdown -->
+                <select class="methodSelect" id="decipherMethodSelect">
+                  <option value="" disabled selected>Select Method</option>
+                  <option value="decryptcaesar">Caesar Cipher</option>
+                  <option value="decryptatbash">Atbash Cipher</option>
+                  <option value="bruteforce">Brute Force</option>
+                </select>
 
-          </div>
+                <!-- Shift Dropdown (hidden initially) -->
+                <select id="decryptCaesarShiftSelect" class="decrypt-caesar-shift-dropdown hidden">
+                  <option value="" disabled selected>Select Shift (1-25)</option>
+                      <!-- Options generated by JS later -->
+                </select>
+
+              </div>
+
+              <!-- Decipher Button -->
+              <button id="decipherButton">Decipher <i class="fas fa-lock-open"></i></button>
+              
+              <!-- Dicpher Output Area -->
+              <div class="decipher-output-area">
+                <p>Your Deciphered Text Below :</p>
+                <textarea id="decipherOutput" name="cipherOutput" class="decipher-output-box" placeholder="Deciphered text will appear here..." readonly></textarea>
+              </div>
+
+              <!-- Back annd Reset Button -->
+              <div class="resetAndBackBtn">
+                <button class="toggleButton" id="resetDecipherBtn">Reset</button>
+                <button class="toggleButton" id="decipherMenuBackBtn">Back</button>     
+              </div> 
+              
+            </div>
+            
+            <!---------- Instruction Area ---------->
+            <div class="instructionArea hidden">
+              
+              <!-- Instruction Area Header -->
+              <h3><i class="fa-solid fa-book"></i> <span class="color-text">How</span> It Works!</h3>
+              <p>Basic information and guide on ciphering and deciphering:</p>
+             
+              <!-- Cipher Guide Area -->
+              <div class="cipherGuide">
+                <h2 class="guideSection">Cipher</h2>
+                <p>It is a method of transforming a text in order to conceal its meaning from plain sight.</p>
+                <p>Most method involves shifting letters from its order in the alphabet or the texts itself.</p>
+                <h2 class="guideSection">Cipher Methods</h2>
+                <p>Known methods range from basics such as Caesar, Atbash, and Rail Fence Cipher to complex such as the Enigma Machine.</p>
+                <p>This program showcases the Caesar and Atbash Cipher Methods.</p>
+                <h2 class="guideSection">Caesar Cipher</h2>
+                <p>A simple substitution cipher that shifts each letter in the plaintext by a fixed number of positions down the alphabet.</p>
+                <p>Typically, the number of shifts of the letter is 3.</p>
+                <p>Example : Letter "a" will shift 3 times from a(0), b(1) , c(2) , d(3).</p>
+                <p>Hence, Caesar Cipher (3) of "a" is "d".</p>
+                <p>In this program, the number of shifts will be manually assigned by the user (from 1-25).</p>
+                <p>Below is an image showing its process : </p>
+                <img src="assets/images/caesarLightmode.png" alt="Caesar Cipher Lightmode Process" class="cipher-img caesar-img light-img">
+                <img src="assets/images/caesarDarkmode.png" alt="Caesar Cipher Darkmode Process" class="cipher-img caesar-img dark-img hidden">
+                <h2 class="guideSection">Atbash Cipher</h2>
+                <p>A simple cipher that replaces each letter with its opposite in the alphabet.</p>
+                <p>Example : Opposite of letter "c" (3rd letter) is "x" (3rd to the last letter).</p>
+                <p>Hence, Atbash Cipher of "c" is "x".</p>
+                <p>Below is an image showing its process : </p>
+                <img src="assets/images/atbashLightmode.png" alt="Atbash Cipher Lightmode Process" class="cipher-img atbash-img light-img">
+                <img src="assets/images/atbashDarkmode.png" alt="Atbash Cipher Darkmode Process" class="cipher-img atbash-img dark-img hidden">
+                <h2 class="guideSection">Layering</h2>
+                <p>Not a formal term, but a term that can be used for applying two or more ciphers in sequence.</p>
+                <p>Basically, having a layer of ciphers makes deciphering harder by increasing the number of possible combinations.</p>
+                <p>This program will also offer its users the option to layer their ciphered texts.</p>
+              </div>
+              
+              <!-- Decipher Guide Area -->
+              <div class="decipherGuide">
+                <h2 class="guideSection">Decipher</h2>
+                <p>It is the process of converting a ciphered text back into its original form.</p>
+                <p>Typically done by reversing the process on how it was ciphered.</p>
+                <h2 class="guideSection">Decipher Methods</h2>
+                <p>Generally, the method will depend on how the text was ciphered. So knowing how a text was ciphered is the key to deciphering it.</p>
+                <p>This program also covers Caesar and Atbash Decipher Methods.</p>
+                <p>In addition, a Brute Force Function was also added.</p>
+                <h2 class="guideSection">Deciphering Caesar</h2>
+                <p>Assuming the user know it was ciphered by Caesar Method and also know the number of shifts that was used.</p>
+                <p>This can be deciphered by reversing the number of shift made to the text backwards.</p>
+                <p>Example : Caesar Cipher (3) was used to have a ciphered letter "d"</p>
+                <p>To decipher it , letter "d" will shift backwards 3 times from d(3) , c(2) , b(1) , a(0).</p>
+                <p>Hence the deciphered letter of "d" is "a".</p>
+                <h2 class="guideSection">Deciphering Atbash</h2>
+                <p>Assuming the user know it was ciphered by Atbash Method.</p>
+                <p>This can easily be deciphered by applying the Atbash Method itself to the ciphered text.</p>
+                <p>Example : Atbash Cipher was used to have a ciphered letter "x"</p>
+                <p>To decipher it , determine the oppoiste of "x" (3rd to the last letter) in the alphabet. Which is "c" (3rd letter)</p>
+                <p>Hence, Atbash deciphered text of "x" is "c".</p>
+                <h2 class="guideSection">Brute Force</h2>
+                <p>It's a method of deciphering by trying every possible key or combination until the correct one is found.</p>
+                <p>Usually done by a computer in a form of a computer program (like this one).</p>
+                <p>In a brute force attempt, let's say to a Caesar Cipher.</p>
+                <p>The program will try to decipher the text by doing all the 25 possible shifts in the alphabet.</p>
+                <p>Then gather the result and display it for the user to see.</p>
+                <p>The brute force method in this program allows user to brute force caesar cipher, atbash, and even the combination of the two.</p>
+              </div>
+              
+              <!-- Back Button -->
+              <button class="toggleButton" id="instructionMenuBackBtn">Back</button> 
+              
+            </div>
+            
+              
+          </div>   
         </section>
 
 
@@ -188,12 +291,12 @@
           <div class="texts">
 
             <h3><span class="color-text">About</span> This Page</h3>
-            <p>This page is an archive for all of my projects and assets.
+            <p>This page offers tools for ciphering and deciphering words and/or characters using two methods.</p>
             <h3 class="about-heading">Portal :</h3>
 
             <div class="about-links">
 
-              <a href="https://github.com/marcsnl" target="_blank" class="about-area-links">
+              <a href="https://github.com/marcsnl/" target="_blank" class="about-area-links">
                 <i class="fab fa-github"></i> GitHub
               </a>
               
@@ -204,14 +307,8 @@
               <a href="https://marcsnl.itch.io/" target="_blank" class="about-area-links">
                 <i class="fas fa-gamepad"></i> Itch.io
               </a>
-
-              <h1><span class="color-text">Color Theme</span> Reference:</h1>
-
-              <a href="https://www.youtube.com/watch?v=Ae2nwxun9hw" target="_blank" class="about-area-links">
-                <i class="fab fa-youtube"></i> CodingLab
-              </a>
-              
               </div>
+            
             </div>
         </section>
 
@@ -223,8 +320,9 @@
     
     </div> 
 
-    <!-- Script tag -->
-    <script src="script.js" defer></script>
-
   </body>
+
+  <!-- partial -->
+  <script  src="./script.js"></script>
+
 </html>
