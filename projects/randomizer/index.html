@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- Randomizer program in its simplest form -->
+<html>
+  <head>
+    
+    <!-- style area -->
+    <style>
+      main{
+        height: 350px;
+      }
+      footer{
+          text-align: center;
+      }
+      #sec0 {
+        text-align: center;
+      }
+      #sec1 {
+        text-align: center;
+      }
+      #userList {
+        width:35%; 
+        height: 20px; 
+        font-size: 15px; 
+        padding: 10px; 
+        margin-top: 20px;
+      }       
+      #randbutton {
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+      #result {
+        margin-top: 20px;
+        font-size: 15px;
+        height: 50px;
+        line-height: 50px;
+        overflow: hidden;
+        display: block;
+      }
+    </style>
+    
+    <!-- title and description area -->
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a program that lets the user randomize a list of data that will be provided">
+    <title>Randomizer</title>
+    
+  </head>
+  
+  <body>
+    <header>
+      <section id="sec0">
+        <h1>Randomizer</h1>
+        <p>Simple program that lets user list an item, and randomly selects an item from the given list.</p>
+      </section>      
+    </header>
+    
+    <br/><hr/><br/>
+    
+    <main>
+      
+      <!-- Main Section for the intended program -->
+      <section id="sec1">
+        
+        <h2>Let's Randomize</h2>
+        <p>Type the list of items you want to randomize and click Randomize button : </p>
+        <input type="text" id="userList" placeholder="Enter the items here (separate the items using commas '','')">
+        <button id="randbutton">Randomize</button>
+        <p id="result"></p>
+        
+      </section>
+    </main>
+    
+    <br/><hr/><br/>
+
+    <footer>
+      <p>Contact</p>
+      <p>E-mail : marcsnl@proton.me</p>
+    </footer>
+    
+    <!-- script area -->
+    <script>
+      
+      //These are the objects
+      const userList = document.getElementById("userList");
+      const randButton = document.getElementById("randbutton");
+      const result = document.getElementById("result");
+
+      //These are instructions for the objects above, all inside the button event listener function 
+      randButton.addEventListener("click", function () {
+        
+        //This code splits the input into individual item to be randomized when it sees a comma ','
+        let items = userList.value.split(",").map(item => item.trim());
+        
+        //This code checks for comma with blank items, and remove it from the list
+        items = items.filter(item => item !== "");
+
+        // This code catches the inputField for empty prompts
+        if (items.length === 0 || (items.length === 1 && items[0] === "")) {
+          result.textContent = "Please enter some items!";
+          return;
+        }
+
+        // This code 'randomly' assigns an item to be displayed from the list
+        let randomIndex = Math.floor(Math.random() * items.length);
+        let randomItem = items[randomIndex];
+
+        // This code, displays the result
+        result.textContent = "Result : " + randomItem;
+      });
+      
+    </script>
+      
+  </body>
+</html>

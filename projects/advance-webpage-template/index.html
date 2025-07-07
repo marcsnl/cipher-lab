@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Advance Webpage Template</title>
+
+  <!-- Initial tags -->
+  <meta charset="UTF-8" />
+  <meta name="description" content="This is project is a sample of an advance webpage template" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+  <!-- Page Icon -->
+  <link rel="icon" type="image/png" href="../../assets/images/favicon.png" />
+    
+  <!-- Page Title -->
+  <title>Title Here</title>
+    
+  <!-- style.css link -->
+  <link rel="stylesheet" href="style.css" />
+    
+  <!-- Font Awsome local link -->
+  <link rel="stylesheet" href="../../all.css" />
+
+  <!-- Font Awsome main link -->
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/> -->
+    
+</head>
+    <body>
+
+    <!-- Body Wrapper-->
+    <div class="wrapper">
+
+      <!-- Navigation Bar -->
+      <nav>
+        <div class="navigation-bar">
+
+          <!-- Logo and/or Title Area of Navigation Bar -->
+          <div class="title-page-area"><img src="../../assets/images/page-logo.png"class="page-logo" alt="page logo">Title Here</div>
+          
+          <!-- Navigation Bar Links-->
+          <ul class="nav-links">
+            <li><a href="#home" class="active-nav">Home</a></li>
+            <li><a href="#explore">Explore</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+
+          <!-- Hamburger Toggle Links For Mobile Screens -->
+          <div class="nav-links-menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+
+          <!-- Appearance Area (Color Theme and DarkMode) of Navigation Bar -->
+          <div class="appearance-area">
+
+            <!-- Color Selection Button -->
+            <div class="color-theme" title="Color Theme">
+              <div class="color-icon">
+                <i class="fas fa-palette"></i>
+                <i class="fas fa-sort-down arrow"></i>
+              </div>
+
+              <!-- Color Selection Box (Pop-up Menu) -->
+              <div class="color-menu">
+                <!-- Color Selection Box Title -->
+                <h3>Color Selection</h3>
+                <!-- Color Buttons (Data Color : Hex 0-White 1-text-color 2-primary-color 3-secondary-color 4-ui-bg) -->
+                <div class="color-switchers">
+                    <button class="btn black active" title="Black" data-color="#fff #000000 #000000 #272B2F #FFFFFF"></button>
+                    <button class="btn red" title="Red" data-color="#fff #000000 #800000 #65000B #F8F0F0"></button>
+                    <button class="btn blue" title="Blue" data-color="#fff #000000 #003153 #0F1E33 #F0F4F8"></button>
+                    <button class="btn green" title="Green" data-color="#fff #000000 #355E3B #043927 #F1FAF3"></button>
+                    <button class="btn indigo" title="Violet"data-color="#fff #000000 #4B0082 #32174D #F4F0FA"></button>
+                </div>
+              </div>
+              
+            </div>
+
+            <!-- Darkmode Button -->
+            <div class="dark-mode-btn" title="Dark Mode">
+              <!-- Data Color : Hex  0-White 1-text-color 2-primary-color 3-secondary-color 4-ui-bg -->
+              <i class="btn fas fa-moon" data-color="#fff #e4e6eb #272B2F #1D2124 #171A1D"></i>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main Content Section -->
+      <main class="content">
+    
+        <!-- Home Section -->
+        <section id="home" class="page-content active-section">
+          <div class="texts">
+            <h3><span class="color-text">Welcome!</span></h3>
+            <p>Subtitle here....</p>
+            <h3><span class="color-text">Introduction</span> here...</h3>
+            <p>Another subtitle here</p>
+            <h3>Some extra <span class="color-text">Words</span> color change...</h3>
+            <p>More subtitles here...</p>
+            <h3>Let's <span class="color-text">Explore</span> :</h3>
+            <p>Explore button below will go to explore tab.</p>
+            <a href="#explore" id="exploreBtn">Explore <i class="fas fa-location-arrow"></i></a>
+          </div>
+        </section>
+      
+        <!-- Explore Section -->
+        <section id="explore" class="page-content">
+          <div class="texts">
+            <h3>Your <span class="color-text">Stuff</span></h3>
+          </div>
+
+          <div class="projects-grid">
+
+            <!-- Box Containers -->
+            <div class="box">
+              <h4>Box 0</h4>
+              <ul>
+                <li class="explore-list"><a href="#" target="_blank" class="explore-link">Sample Content</a> <a href="#" target="_blank" class="icon-link" title="CodePen"><i class="fas fa-pen"></i></a></li>
+                <li class="explore-list"><a href="#" target="_blank" class="explore-link">Sample Content</a> <a href="#" target="_blank" class="icon-link"><i class="fas fa-pen"  title="CodePen"></i></a></li>
+                <li class="explore-list"><a href="#" target="_blank" class="explore-link">Sample Content</a> <a href="#" target="_blank" class="icon-link"><i class="fas fa-pen"  title="CodePen"></i></a></li>
+                <li class="explore-list"><a href="#" target="_blank" class="explore-link">Sample Content</a> <a href="#" target="_blank" class="icon-link"  title="CodePen"><i class="fas fa-pen"></i></a></li>
+                <li class="explore-list"><a href="#" target="_blank" class="explore-link">Sample Content</a> <a href="#" target="_blank" class="icon-link"  title="CodePen"><i class="fas fa-pen"></i></a></li>
+              </ul>
+            </div>
+
+            <div class="box">
+              <h4>Box 1</h4>
+              <ul>
+                <li class="explore-list"><a href="#" target="_blank" class="explore-link">Sample Content</a> <a href="#" target="_blank" class="icon-link" title="CodePen"><i class="fas fa-pen"></i></a></li>
+                <li class="explore-list"><a href="#" target="_blank" class="explore-link">Sample Content</a> <a href="#" target="_blank" class="icon-link" title="CodePen"><i class="fas fa-pen"></i></a></li>
+                <li class="explore-list"><a href="#" target="_blank" class="explore-link">Sample Content</a> <a href="#" target="_blank" class="icon-link" title="CodePen"><i class="fas fa-pen"></i></a></li>
+                <li class="explore-list"><a href="#" target="_blank" class="explore-link">Sample Content</a> <a href="#" target="_blank" class="icon-link" title="CodePen"><i class="fas fa-pen"></i></a></li>
+                <li class="explore-list"><a href="#" target="_blank" class="explore-link">Sample Content</a> <a href="#" target="_blank" class="icon-link"  title="CodePen"><i class="fas fa-pen"></i></a></li>
+              </ul>
+            </div>
+
+            <div class="box">
+              <h4>Box 2</h4>
+              <ul>
+                <li class="explore-list"><a href="#" class="explore-link"><i class="fas fa-triangle-exclamation"></i></a> </li>
+                <li class="explore-list"><a href="#" class="explore-link"><i class="fas fa-triangle-exclamation"></i></a> </li>
+                <li class="explore-list"><a href="#" class="explore-link"><i class="fas fa-triangle-exclamation"></i></a> </li>
+                <li class="explore-list"><a href="#" class="explore-link"><i class="fas fa-triangle-exclamation"></i></a> </li>
+                <li class="explore-list"><a href="#" class="explore-link"><i class="fas fa-triangle-exclamation"></i></a> </li>
+              </ul>
+            </div>
+
+            <div class="box">
+              <h4>Assets</h4>
+              <ul>
+                <li class="explore-list"><a href="#" class="explore-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-image"></i></a></li>
+                <li class="explore-list"><a href="#" class="explore-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-video"></i></a></li>
+                <li class="explore-list"><a href="#" class="explore-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-music"></i></a></li>
+                <li class="explore-list"><a href="#" class="explore-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-code"></i></a></li>
+                <li class="explore-list"><a href="#" class="explore-link"><i class="fas fa-triangle-exclamation"></i></a> <a href="#" class="icon-link"><i class="fas fa-cubes"></i></a></li>
+              </ul>
+            </div>
+                
+            <div class="box">
+              <h4>Template Description</h4>
+              <p>The template's color theme function came from CodingLab sample theme, along with its canvas and content layout (link in "About Tab"). I (with the help of youtube tutorials and LLM #VibeCode no hate) modified the rest and give function to the navigation links.</p>
+            </div>
+
+            <div class="box">
+             <h4>Layout Description</h4>
+              <p>This template also caters for vertical narrow screens (such as mobile devices). Reference on its style is within the css code in its bottom lines of code (@media)</p>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="page-content">
+          <div class="texts">
+
+            <h3><span class="color-text">About</span> This Page</h3>
+            <p>About subtitle here.</p>
+            <h3 class="about-heading">Portal :</h3>
+
+            <div class="about-links">
+
+              <a href="https://github.com/" target="_blank" class="about-area-links">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              
+              <a href="https://codepen.io/" target="_blank" class="about-area-links">
+                <i class="fas fa-pen"></i> CodePen
+              </a>
+              
+              <a href="https://itch.io/" target="_blank" class="about-area-links">
+                <i class="fas fa-gamepad"></i> Itch.io
+              </a>
+
+              <h1><span class="color-text">Color Theme</span> Reference:</h1>
+
+              <a href="https://www.youtube.com/watch?v=Ae2nwxun9hw" target="_blank" class="about-area-links">
+                <i class="fab fa-youtube"></i> CodingLab
+              </a>
+              
+              </div>
+            </div>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <p>Email : email here</p>
+      </footer>
+    
+    </div> 
+
+  </body>
+
+  <!-- partial -->
+  <script  src="./script.js"></script>
+
+</html>

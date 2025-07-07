@@ -1,0 +1,109 @@
+/* ===== General Layout ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 160px auto auto 125px;
+  gap: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.container div,
+header,
+footer {
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+/* ===== Grid Area Control ===== */
+header, footer {
+  text-align: center;
+  grid-column: 1 / 5;
+}
+
+.box0 { text-align: center; grid-column: 1 / 4; grid-row: 2 / 4; }
+.box1 { grid-column: 4 / 5; grid-row: 2 / 3; }
+.box2 { grid-column: 4 / 5; grid-row: 3 / 4; }
+
+/* ===== Input Styles (Shared) ===== */
+input[type="number"],
+input[type="date"],
+select {
+  padding: 0.6rem;
+  margin: 0.3rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  border-color: #222;
+  box-shadow: 0 0 0 2px rgba(34, 34, 34, 0.2);
+}
+
+/* ===== Input Widths (Custom) ===== */
+#startingMoney       { width: 45%; }
+#depositAmount,
+#depositFrequency     { width: 30%; }
+#interestRate,
+#taxRate              { width: 15%; }
+#startDate,
+#endDate              { width: 20%; }
+
+/* ===== Toggle Style ===== */
+#depositToggle {
+  accent-color: #222;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+/* ===== Buttons ===== */
+#calculateBtn,
+#resetBtn {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#calculateBtn:hover,
+#resetBtn:hover {
+  background-color: #444;
+}
+
+/* ===== Table ===== */
+#resultArea table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#resultArea th,
+#resultArea td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#resultArea th {
+  background-color: #222;
+  color: white;
+}

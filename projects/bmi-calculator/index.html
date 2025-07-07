@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- BMI Calculator in its simplest form -->
+<html>
+  <head>
+    
+    <!-- style area -->
+    <style>
+      /*comment for style area*/
+      main {
+        height: 350px;
+      }
+      footer{
+        text-align: center;
+      }
+      #sec0 {
+        text-align: center;
+      }
+      #sec1 {
+        text-align: center;
+      }
+      </style>
+      
+    <!-- title and description area -->
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a program that lets the users compute for their BMI">
+    <title>BMI Calculator</title>
+      
+  </head>
+    
+  <body>
+    <header>
+      <section id="sec0">
+        <h1>BMI Calculator</h1>
+        <p>Simple program that lets user compute for their BMI.</p>
+      </section>      
+    </header>
+    
+    <br/><hr/><br/>
+    
+    <main>
+      <!-- Main Section for the intended program -->
+      <section id="sec1">
+        
+        <h2>Let's Compute</h2>
+        <p>Choose a type of measurement for your height and weight, enter their values, then click compute.</p>
+        
+        <p>Height:</p>
+        <input type="number" id="height" placeholder="Enter height">
+        <select id="heightUnit">
+          <option value="cm">cm</option>
+          <option value="ftin">ft</option>
+        </select>
+
+        <p>Weight:</p>
+        <input type="number" id="weight" placeholder="Enter weight">
+        <select id="weightUnit">
+          <option value="kg">kg</option>
+          <option value="lbs">lbs</option>
+        </select>
+
+        <br/><br/>
+        <button id="compute">Compute</button><br/><br/>
+        <p id="result"></p>
+        
+      </section>
+      
+    </main>
+    
+    <br/><hr/><br/>
+    
+    <footer>
+      <p>Contact</p>
+      <p>E-mail : marcsnl@proton.me</p>
+    </footer>
+    
+    <!-- script area -->
+    <script>
+      //comment for script area
+      document.getElementById("compute").addEventListener("click", function () {
+        let height = parseFloat(document.getElementById("height").value);
+        let weight = parseFloat(document.getElementById("weight").value);
+        let heightUnit = document.getElementById("heightUnit").value;
+        let weightUnit = document.getElementById("weightUnit").value;
+
+        // Convert height to meters
+        if (heightUnit === "cm") {
+          height = height / 100;
+        } else if (heightUnit === "ftin") {
+          // Assume user enters height in total feet with decimals (e.g., 5.5 ft)
+          let feet = Math.floor(height);
+          let inches = (height - feet) * 100; // Convert decimal part to inches
+          height = (feet * 12 + inches) * 0.0254;
+        }
+
+        // Convert weight to kilograms
+        if (weightUnit === "lbs") {
+          weight = weight * 0.453592;
+        }
+
+        // Compute BMI
+        if (height > 0 && weight > 0) {
+          let bmi = weight / (height * height);
+          document.getElementById("result").textContent = `Your BMI is ${bmi.toFixed(2)}.`;
+        } else {
+          document.getElementById("result").textContent = "Please enter valid values!";
+        }
+      });
+    </script>
+    
+  </body>
+</html>
