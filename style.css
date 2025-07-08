@@ -283,7 +283,7 @@ nav {
 #cipherInput {
   width: 500px;
   max-width: 100%;
-  height: 150px;
+  height: 250px;
   padding: 0.8rem 1rem;
   font-size: 18px;
   border: 1px solid gray;
@@ -345,7 +345,7 @@ nav {
 .cipher-output-box {
   width: 500px;
   max-width: 100%;
-  height: 150px;
+  height: 250px;
   padding: 0.8rem 1rem;
   font-size: 18px;
   font-family: 'Courier';
@@ -377,7 +377,7 @@ nav {
 #decipherInput {
   width: 500px;
   max-width: 100%;
-  height: 150px;
+  height: 250px;
   padding: 0.8rem 1rem;
   font-size: 18px;
   border: 1px solid gray;
@@ -439,7 +439,7 @@ nav {
 .decipher-output-box {
   width: 500px;
   max-width: 100%;
-  height: 150px;
+  height: 250px;
   padding: 0.8rem 1rem;
   font-size: 18px;
   font-family: 'Courier';
@@ -470,16 +470,16 @@ nav {
 
 .guideSection {
   position: relative;
-  padding-top: 3rem; /* spacing from previous content */
-  margin-top: 3rem;  /* additional separation if desired */
+  padding-top: 3rem;
+  margin-top: 3rem;
 }
 
 .guideSection::before {
   content: "";
   display: block;
   width: 100%;
-  height: 2px; /* thickness of the line */
-  background-color: #ccc; /* or your accent color */
+  height: 2px;
+  background-color: #ccc;
   position: absolute;
   top: 0;
   left: 0;
@@ -571,4 +571,9 @@ nav {
     align-items: center;
     gap: 10px;
   }
+  
+  #cipherInput, #decipherInput, .cipher-output-box, .decipher-output-box {
+    width: 350px;
+  }
+  
 }
