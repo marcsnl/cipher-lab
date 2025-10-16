@@ -95,6 +95,10 @@ nav {
   user-select: none;
 }
 
+.title-page-area a{
+  opacity: 1;
+}
+
 #logoLink{
   font-size: 30px;
   font-weight: 600;
