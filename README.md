@@ -1,3 +1,3 @@
 # cipher-lab
 
-Project that focuses on ciphering and deciphering texts.
+Program that focuses on ciphering and deciphering texts.
