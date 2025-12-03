@@ -75,30 +75,6 @@ mainProgramBtn.addEventListener("click", (e) => {
   document.getElementById("mainProgram").classList.add("active-section");
 });
 
-//--------------- Nav Menu logic for Phones ---------------
-
-const toggle = document.querySelector('.nav-links-menu-toggle');
-const navLinksContainer = document.querySelector('.nav-links');
-
-// Toggle mobile menu visibility
-toggle.onclick = (e) => {
-  e.stopPropagation(); // Prevent the toggle click from immediately closing
-  navLinksContainer.classList.toggle('show');
-};
-
-// Close nav when clicking outside
-document.addEventListener('click', (e) => {
-  if (!navLinksContainer.contains(e.target) && !toggle.contains(e.target)) {
-    navLinksContainer.classList.remove('show');
-  }
-});
-
-// Close mobile menu after a link is clicked
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinksContainer.classList.remove('show');
-  });
-});
 
 //--------------- Main Menu and toggle buttons logic ---------------
 
