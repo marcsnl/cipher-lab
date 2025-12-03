@@ -61,20 +61,6 @@ darkToggle.addEventListener("click", () => {
   }
 });
 
-//--------------- Main Program Button logic ---------------
-
-const mainProgramBtn = document.getElementById("mainProgramBtn");
-
-mainProgramBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  navLinks.forEach(nav => nav.classList.remove("active-nav"));
-  sections.forEach(sec => sec.classList.remove("active-section"));
-
-  document.querySelector(".nav-links a[href='#mainProgram']").classList.add("active-nav");
-  document.getElementById("mainProgram").classList.add("active-section");
-});
-
 
 //--------------- Main Menu and toggle buttons logic ---------------
 
