@@ -61,24 +61,6 @@ darkToggle.addEventListener("click", () => {
   }
 });
 
-//--------------- Tab Navigation logic ---------------
-
-const navLinks = document.querySelectorAll(".nav-links a");
-const sections = document.querySelectorAll(".page-content");
-
-navLinks.forEach(link => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    navLinks.forEach(nav => nav.classList.remove("active-nav"));
-    link.classList.add("active-nav");
-
-    sections.forEach(sec => sec.classList.remove("active-section"));
-    const targetID = link.getAttribute("href").substring(1);
-    document.getElementById(targetID).classList.add("active-section");
-  });
-});
-
 //--------------- Main Program Button logic ---------------
 
 const mainProgramBtn = document.getElementById("mainProgramBtn");
